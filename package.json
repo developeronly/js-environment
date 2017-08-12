@@ -3,6 +3,15 @@
   "version": "1.0.0",
   "description": "JavaScript development environment",
   "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "//": "pre runs before the script.",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "localtunnel": "lt --port 3000 --subdomain dheerajk",
+    "share": "npm-run-all --parallel security-check open:src localtunnel",
+    "///": "post runs after the script.",
+    "poststart": ""
   },
   "author": "Dheeraj Karande",
   "license": "MIT",
