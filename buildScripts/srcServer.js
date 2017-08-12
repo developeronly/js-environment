@@ -1,10 +1,10 @@
 //This file will configure a express web server that will serve up the files in our source directory.
-var express = require('express');
-var path = require('path');
-var open = require ('open');
+import express from 'express';
+import path from 'path';
+import open from 'open';
 
-var port = 3000;
-var app = express();
+const port = 3000;
+const app = express();
 
 //Defining routes
 app.get('/', function(req, res) {
